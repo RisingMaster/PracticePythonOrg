@@ -1,0 +1,32 @@
+# https://www.practicepython.org/
+
+# Exercise 1
+# Create a program that asks the user to enter their name and their age.
+# Print out a message addressed to them that tells them the year that they will turn 100 years old.
+#
+# Extras:
+# Add on to the previous program by asking the user for another number and printing out that many copies of the previous message. (Hint: order of operations exists in Python)
+# Print out that many copies of the previous message on separate lines. (Hint: the string "\n is the same as pressing the ENTER button)
+
+import datetime
+
+name = input('Tell me your name, please...')
+age = input('Tell me your age now...')
+now = datetime.datetime.now()
+
+
+
+print('Your name is {}'.format(name))
+print('Your age is {}'.format(age))
+
+the_string ='You wil be 100, or maybe you acctually was, in {} year'.format(now.year+100-int(age))
+print(the_string)
+
+repeats = input('How many repeats of the last string do you want?')
+
+for i in range(0,int(repeats)): print(i+1," - ",the_string)
+
+print('\n\n\nYou can multiply strings the same way as adding them, did you know that?')
+
+print(4*(the_string, ' / '))
+
